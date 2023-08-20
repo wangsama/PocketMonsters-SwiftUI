@@ -9,11 +9,12 @@ import SwiftUI
 
 struct PokemonInfoRow: View {
     let model: PokemonViewModel
-    let expanded: Bool
+    @State var expanded: Bool
     
     var body: some View {
         VStack {
             HStack {
+                /// 图片
                 Image("Pokemon-\(model.id)")
                     .resizable()
                     .frame(width: 50, height: 50)
@@ -65,6 +66,9 @@ struct PokemonInfoRow: View {
             }
         )
         .padding(.horizontal)
+        .onTapGesture {
+            self.expanded.toggle()
+        }
     }
 }
 
