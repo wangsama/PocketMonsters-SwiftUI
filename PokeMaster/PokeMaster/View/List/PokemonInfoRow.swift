@@ -14,6 +14,7 @@ struct PokemonInfoRow: View {
     var body: some View {
         VStack {
             HStack {
+                /// 图片
                 Image("Pokemon-\(model.id)")
                     .resizable()
                     .frame(width: 50, height: 50)
