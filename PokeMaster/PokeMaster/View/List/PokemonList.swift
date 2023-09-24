@@ -23,6 +23,18 @@ struct PokemonList: View {
                 }
             }
         }
+        .overlay {
+            VStack {
+                Spacer()
+                PokemonInfoPanel(model: .sample(id: 1))
+            }.edgesIgnoringSafeArea(.bottom)
+        }
+        
+        // 列表模式
+//        List(PokemonViewModel.all) { pokemon in
+//            PokemonInfoRow(model: pokemon, expanded: false)
+//                .listRowSeparator(.hidden)
+//        }
     }
 }
 
